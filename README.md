@@ -27,9 +27,6 @@ TF-IDF-cranDataSet/
 ├─ Evaluation-1.py # Script version of evaluation pipeline
 └─ .ipynb_checkpoints/ # Notebook checkpoints
 
-yaml
-Copy
-Edit
 
 > If you extend the project, consider adding modules like `preprocess.py`, `index.py`, `rank.py`, `eval.py` for a cleaner CLI.
 
@@ -56,9 +53,6 @@ Edit
 git clone https://github.com/zakarich/TF-IDF-cranDataSet.git
 cd TF-IDF-cranDataSet
 
-shell
-Copy
-Edit
 
 ### 2) (Optional) Create a virtual environment
 
@@ -70,9 +64,6 @@ Windows
 macOS / Linux
 source .venv/bin/activate
 
-shell
-Copy
-Edit
 
 ### 3) Install dependencies
 
@@ -81,18 +72,13 @@ pip install numpy scipy scikit-learn nltk pandas matplotlib jupyter
 
 Optional:
 pip install spacy && python -m spacy download en_core_web_sm
-shell
-Copy
-Edit
+
 
 ### 4) Run the pipeline (script)
 
 End-to-end evaluation run (adjust flags/paths inside the script if needed)
 python Evaluation-1.py
 
-shell
-Copy
-Edit
 
 ### 5) Or use the notebooks
 
@@ -100,9 +86,7 @@ jupyter notebook
 
 Open: TF-IDF_Evaluation.ipynb
 (Optionally) TestOutOfData.ipynb for additional experiments
-yaml
-Copy
-Edit
+
 
 ---
 
@@ -122,9 +106,6 @@ Evaluate ranked lists with Precision@k, Recall@k, MAP (and optionally NDCG/MRR)
 
 Export or display metrics and top-k results
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -143,9 +124,6 @@ Stopword list source (nltk, spaCy, or custom domain list)
 
 Top-k cutoff for evaluation (e.g., k=10, 20, 100)
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -165,19 +143,16 @@ Q = tfidf.transform(queries)       # (n_queries x n_terms)
 scores = cosine_similarity(Q, X)   # (n_queries x n_docs)
 ranked = scores.argsort(axis=1)[:, ::-1]  # rank docs per query (desc)
 (In this repo, use the provided script/notebooks instead of this toy demo.)
+```
 
-🧪 Testing
-graphql
-Copy
-Edit
+## 🧪 Testing
+
 # If you add pytest/CI later:
 pytest -q
 Current project focuses on experimentation via notebooks and the Evaluation-1.py script. For production-style testing, consider refactoring into modules and adding pytest suites.
 
-🤝 Contribution
-sql
-Copy
-Edit
+## 🤝 Contribution
+
 Contributions are welcome!
 
 Ideas:
@@ -192,16 +167,13 @@ Workflow:
 2) Create a feature branch
 3) Commit with clear messages
 4) Open a PR with notes and (if possible) a notebook demo
-📬 Contact
-perl
-Copy
-Edit
+
+## 📬 Contact
+
 Maintainer: @zakarich  (https://github.com/zakarich)
 Open an Issue for bugs/ideas, or connect for collaboration.
 📄 License
-vbnet
-Copy
-Edit
+
 MIT License
 
 Copyright (c) 2025 zak
@@ -224,12 +196,9 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
-⭐ Citation (optional)
+## ⭐ Citation (optional)
 If you use or extend this repo in academic work, please cite the Cranfield collection and this repository.
 
-csharp
-Copy
-Edit
 @misc{zakarich_tfidf_cranfield,
   title  = {TF-IDF on the Cranfield Dataset},
   author = {Zakariyae Chatri},
